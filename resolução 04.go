@@ -8,11 +8,12 @@ func main() {
 	fmt.Print("Digite o tamanho da Slice: ")
 	fmt.Scan(&tamanho)
 
-	var slice []int
+	slice := make([]int, tamanho)
+
 	for i := 0; i < tamanho; i++ {
 		fmt.Print("Digite um valor: ")
 		fmt.Scan(&valor)
-		slice = append(slice, valor)
+		slice[i] = valor
 	}
 
 	var soma int
